@@ -35,7 +35,7 @@ public class Program
         //program.Task_2_10(10);
         //program.Task_2_11(10);
         //program.Task_2_12(10, 0);
-        program.Task_2_13(10, 5, 0);
+        //program.Task_2_13(10, 5, 0);
         //program.Task_3_1();
         //program.Task_3_2(3, 2, 1);
         //program.Task_3_2(1.5, 1.5, 1);
@@ -104,9 +104,7 @@ public class Program
     public double Task_1_4(double a, double b, double c)
     {
         double answer = 0;
-
         // code here
-        Console.WriteLine("hui");
         if (a > b) {
             if (b > c)
                 answer = b;
@@ -407,10 +405,12 @@ public class Program
             {
                 answerLength = l;
                 answer = i + 1;
+                answerLength = Math.Round(answerLength, 2);
+                Console.WriteLine(answer);
+                Console.WriteLine(answerLength);
             }
         }
-        Console.WriteLine(answer);
-        Console.WriteLine(answerLength);
+
         // end
 
         // for test input in console: -1.2 0.7, 2 -2, 0.5 0.9, 1 1.5, -0.5 -1.5
@@ -602,9 +602,14 @@ public class Program
     {
         double answer = 0;
         int n = 0;
-
+        double weight;
         // code here
-
+        while (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out weight)) { 
+            if (weight < 30) {
+                answer += 0.2;
+            }
+        }
+        Console.WriteLine(answer);
         // end
 
         // for test input in console: 27.5, 32.5, 30, 22.3, 26.8, 36.6, 30, 29.9, 20.1, 28.5
@@ -641,9 +646,14 @@ public class Program
     public int Task_3_6()
     {
         int answer = 0, n = 0;
-
+        double x, y;
         // code here
-
+        while (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out x) && double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out y))
+        {
+            if (x >= 0 && x <= Math.PI && y <= Math.Sin(x))
+                answer++;
+        }
+        Console.WriteLine(answer);
         // end
 
         // for test input in console: 1.2 0.7, 2 0.2, 0.5 0.9, -1 1.5, 0.5 0.1
@@ -682,9 +692,16 @@ public class Program
     {
         double answer = double.MaxValue;
         int n = 0;
-
+        double x;
         // code here
-
+        while (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out x))
+        {
+            if (x < answer)
+            {
+                answer = x;
+            }
+        }
+        Console.WriteLine(answer);
         // end
 
         // for test input in console: 27.5, 32.5, 30, 22.3, 26.8, 36.6, 30, 29.9, 20.1, 28.5

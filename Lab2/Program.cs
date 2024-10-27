@@ -286,6 +286,7 @@ public class Program
         int answer = 0;
         double x;
         double y;
+
         // code here
         for (int i = 0; i < n; i++)
         {
@@ -311,6 +312,7 @@ public class Program
     {
         int answer = 0;
         double x;
+
         // code here
         for (int i = 0; i < n; i++)
         {
@@ -332,6 +334,7 @@ public class Program
     {
         int answer = 0;
         double x, y;
+
         // code here
         for (int i = 0; i < n; i++)
         {
@@ -343,7 +346,7 @@ public class Program
             double.TryParse(input2, new CultureInfo("en-US"), out y);
             y = double.Parse(input2, new CultureInfo("en-US"));
             y = Convert.ToDouble(input2, new CultureInfo("en-US"));
-            if (x >= 0 && x <= Math.PI && y <= Math.Sin(x))
+            if (x >= 0 && y >= 0 && x <= Math.PI && y <= Math.Sin(x))
                 answer++;
         }
         Console.WriteLine(answer);
@@ -358,6 +361,7 @@ public class Program
         int answer1 = 0;
         int answer3 = 0;
         double x, y;
+
         // code here
         for (int i = 0; i < n; i++)
         {
@@ -389,6 +393,7 @@ public class Program
         int answer = 0;
         double answerLength = double.MaxValue;
         double x, y;
+
         // code here
         for (int i = 0; i < n; i++)
         {
@@ -421,6 +426,7 @@ public class Program
     {
         double answer = double.MaxValue;
         double x;
+
         // code here
         for (int i = 0; i < n; i++)
         {
@@ -444,6 +450,7 @@ public class Program
     {
         int answer = 0;
         double x, y, z, k;
+
         // code here;
         for (int i = 0; i < n; i++)
         {
@@ -478,6 +485,7 @@ public class Program
         int answer = 0;
         double avg = 0.0;
         double x, y, z, k;
+
         // code here;
         for (int i = 0; i < n; i++)
         {
@@ -603,6 +611,7 @@ public class Program
         double answer = 0;
         int n = 0;
         double weight;
+
         // code here
         while (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out weight)) { 
             if (weight < 30) {
@@ -647,10 +656,11 @@ public class Program
     {
         int answer = 0, n = 0;
         double x, y;
+
         // code here
         while (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out x) && double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out y))
         {
-            if (x >= 0 && x <= Math.PI && y <= Math.Sin(x))
+            if (x >= 0 && y >= 0 && x <= Math.PI && y <= Math.Sin(x))
                 answer++;
         }
         Console.WriteLine(answer);
@@ -693,6 +703,7 @@ public class Program
         double answer = double.MaxValue;
         int n = 0;
         double x;
+
         // code here
         while (double.TryParse(Console.ReadLine(), new CultureInfo("en-US"), out x))
         {
